@@ -32,17 +32,7 @@ namespace StudentsInLib
             if (File.Exists(filename))
             {
                 studentsArray = Loader.LoadFromFile<Student>(filename);
-                students.Items.Clear();
-
-                if (studentsArray != null)
-                {
-                    foreach (var st in studentsArray)
-                    {
-                        var line = $"{st.surname} {st.name} {st.thirdname}";
-                        students.Items.Add(line);
-                    }
-
-                }
+                LoadStudents();
             }
             else
             {
@@ -53,16 +43,7 @@ namespace StudentsInLib
             if (File.Exists(filename))
             {
                 booksArray = Loader.LoadFromFile<Book>(filename);
-                books.Items.Clear();
-
-                if (booksArray != null)
-                {
-                    foreach (var book in booksArray)
-                    {
-                        var line = $"{book.caption} {book.author}";
-                        books.Items.Add(line);
-                    }
-                }
+                LoadBooks();
             }
             else
             {
@@ -73,10 +54,46 @@ namespace StudentsInLib
 
         }
 
-        void BindBookToStudent(object sender, EventArgs e)
+        void LoadStudents()
+        {
+            students.Items.Clear();
+
+            if (studentsArray != null)
+            {
+                foreach (var st in studentsArray)
+                {
+                    var line = $"{st.surname} {st.name} {st.thirdname}";
+                    students.Items.Add(line);
+                }
+
+            }
+        }
+
+        void LoadBooks()
+        {
+            books.Items.Clear();
+
+            if (booksArray != null)
+            {
+                foreach (var book in booksArray)
+                {
+                    var line = $"{book.caption} {book.author}";
+                    books.Items.Add(line);
+                }
+            }
+        }
+
+        void BindBookToStudent(object sender, EventArgs ev)
         {
             var stid = studentsArray[students.SelectedIndex].unicID;
             var book = booksArray[books.SelectedIndex];
+
+            if (book.currentOwner != -1)
+            {
+                var st = studentsArray.First(e => e.unicID == book.unicID);
+                MessageBox.Show($"Отберите книгу у {st.surname} {st.name} {st.thirdname}", "ошибочка");
+                return;
+            }
 
             book.currentOwner = stid;
         }
@@ -112,14 +129,78 @@ namespace StudentsInLib
         {
             LoadData();
         }
-
-        private void AddStudent(object sender, EventArgs e)
+        void Copy<T>(T[] arr1, T[] arr2)
         {
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                arr2[i] = arr1[i];
+            }
 
         }
 
+        private void AddStudent(object sender, EventArgs e)
+        {
+            var line = studentNew.Text.Split();
+            var student = new Student()
+            {
+                name = line[0],
+                surname = line[1],
+                thirdname = line[2],
+                groupNumber = line[3],
+                unicID = studentsArray.Length
+            };
+
+
+            Student[] newArr = new Student[studentsArray.Length + 1];
+            Copy(studentsArray, newArr);
+
+            newArr[studentsArray.Length] = student;
+            studentsArray = newArr;
+
+            LoadStudents();
+        }
+
+
         private void AddBook(object sender, EventArgs e)
         {
+
+            var book = new Book()
+            {
+                caption = captionNew.Text,
+                author = authorNew.Text,
+                currentOwner = -1,
+                unicID = booksArray.Length
+            };
+
+            Book[] newArr = new Book[booksArray.Length + 1];
+            Copy(booksArray, newArr);
+
+            newArr[booksArray.Length] = book;
+            booksArray = newArr;
+
+            LoadBooks();
+        }
+
+        private void SaveAll(object sender, EventArgs e)
+        {
+            var dir = Directory.GetCurrentDirectory();
+            string filename = dir + "/students.txt";
+
+            if (!File.Exists(filename))
+            {
+                File.Create(filename);
+            }
+
+            Loader.SaveToFile(filename, studentsArray);
+
+            filename = dir + "/books.txt";
+
+            if (!File.Exists(filename))
+            {
+                File.Create(filename);
+            }
+
+            Loader.SaveToFile(filename, booksArray);
 
         }
     }

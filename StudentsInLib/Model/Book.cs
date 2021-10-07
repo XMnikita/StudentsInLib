@@ -26,5 +26,14 @@ namespace StudentsInLib.Model
             currentOwner = int.Parse(streamReader.ReadLine());
 
         }
+
+        public void ToFile(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine(caption);
+            streamWriter.WriteLine(author);
+
+            streamWriter.WriteLine(unicID);
+            streamWriter.WriteLine(currentOwner);
+        }
     }
 }

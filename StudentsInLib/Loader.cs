@@ -36,5 +36,28 @@ namespace StudentsInLib
             return null;
         }
 
+        public static void SaveToFile<T>(string filename, T[] array) where T : ILoadFromFile, new()
+        {
+            try
+            {
+                using (StreamWriter streamWriter = new StreamWriter(filename,
+                    false, System.Text.Encoding.UTF8))
+                {
+                    streamWriter.WriteLine(array.Length);
+
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        array[i].ToFile(streamWriter);
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
     }
 }
