@@ -27,5 +27,11 @@ namespace StudentsInLib.Model
 
 
         }
+
+        public void ToFile(StreamWriter streamWriter)
+        {
+            var line = $"{name} {surname} {thirdname} {groupNumber} {unicID}";
+            streamWriter.WriteLine(line);
+        }
     }
 }

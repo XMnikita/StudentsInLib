@@ -9,5 +9,6 @@ namespace StudentsInLib.Model
     interface ILoadFromFile
     {
         void FromFile(System.IO.StreamReader streamReader);
+        void ToFile(System.IO.StreamWriter streamWriter);
     }
 }
