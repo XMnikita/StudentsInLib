@@ -90,7 +90,7 @@ namespace StudentsInLib
 
             if (book.currentOwner != -1)
             {
-                var st = studentsArray.First(e => e.unicID == book.unicID);
+                var st = studentsArray.First(e => e.unicID == book.currentOwner);
                 MessageBox.Show($"Отберите книгу у {st.surname} {st.name} {st.thirdname}", "ошибочка");
                 return;
             }

@@ -8,3 +8,13 @@ C:\Users\Пользователь\Source\Repos\StudentsInLib\obj\Debug\StudentsI
 C:\Users\Пользователь\Source\Repos\StudentsInLib\obj\Debug\StudentsInLib.csproj.CoreCompileInputs.cache
 C:\Users\Пользователь\Source\Repos\StudentsInLib\obj\Debug\StudentsInLib.exe
 C:\Users\Пользователь\Source\Repos\StudentsInLib\obj\Debug\StudentsInLib.pdb
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\bin\Debug\StudentsInLib.exe.config
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\bin\Debug\StudentsInLib.exe
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\bin\Debug\StudentsInLib.pdb
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.csprojAssemblyReference.cache
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.Form1.resources
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.Properties.Resources.resources
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.csproj.GenerateResource.cache
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.csproj.CoreCompileInputs.cache
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.exe
+C:\Users\NOTE\Source\Repos\StudentsInLib\StudentsInLib\obj\Debug\StudentsInLib.pdb
