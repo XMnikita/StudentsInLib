@@ -46,9 +46,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 347);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(232, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Студент";
+            this.button1.Text = "Добавить студента";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.AddStudent);
             // 
@@ -57,40 +57,40 @@
             this.students.FormattingEnabled = true;
             this.students.Location = new System.Drawing.Point(12, 12);
             this.students.Name = "students";
-            this.students.Size = new System.Drawing.Size(308, 277);
+            this.students.Size = new System.Drawing.Size(465, 277);
             this.students.TabIndex = 3;
             // 
             // books
             // 
             this.books.FormattingEnabled = true;
-            this.books.Location = new System.Drawing.Point(637, 12);
+            this.books.Location = new System.Drawing.Point(506, 12);
             this.books.Name = "books";
-            this.books.Size = new System.Drawing.Size(308, 277);
+            this.books.Size = new System.Drawing.Size(545, 277);
             this.books.TabIndex = 4;
             // 
             // studentNew
             // 
             this.studentNew.Location = new System.Drawing.Point(12, 295);
             this.studentNew.Name = "studentNew";
-            this.studentNew.Size = new System.Drawing.Size(308, 20);
+            this.studentNew.Size = new System.Drawing.Size(465, 20);
             this.studentNew.TabIndex = 5;
             this.studentNew.Text = "user";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(870, 347);
+            this.button2.Location = new System.Drawing.Point(739, 347);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(312, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Книга";
+            this.button2.Text = "Добавить книгу";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.AddBook);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(442, 38);
+            this.button3.Location = new System.Drawing.Point(408, 390);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(180, 23);
             this.button3.TabIndex = 7;
             this.button3.Text = "Сохранить";
             this.button3.UseVisualStyleBackColor = true;
@@ -98,29 +98,29 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(326, 84);
+            this.button4.Location = new System.Drawing.Point(408, 448);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(180, 23);
             this.button4.TabIndex = 8;
-            this.button4.Text = "+книга";
+            this.button4.Text = "Взять книгу";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.BindBookToStudent);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(556, 84);
+            this.button5.Location = new System.Drawing.Point(408, 419);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(180, 23);
             this.button5.TabIndex = 9;
-            this.button5.Text = "-книга";
+            this.button5.Text = "Вернуть книгу";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.UnBindBookFromStudent);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(490, 125);
+            this.button6.Location = new System.Drawing.Point(408, 506);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 23);
+            this.button6.Size = new System.Drawing.Size(180, 23);
             this.button6.TabIndex = 10;
             this.button6.Text = "Все";
             this.button6.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(385, 125);
+            this.button7.Location = new System.Drawing.Point(406, 477);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 23);
+            this.button7.Size = new System.Drawing.Size(182, 23);
             this.button7.TabIndex = 11;
             this.button7.Text = "По студенту";
             this.button7.UseVisualStyleBackColor = true;
@@ -138,23 +138,23 @@
             // 
             // captionNew
             // 
-            this.captionNew.Location = new System.Drawing.Point(637, 295);
+            this.captionNew.Location = new System.Drawing.Point(506, 295);
             this.captionNew.Name = "captionNew";
-            this.captionNew.Size = new System.Drawing.Size(308, 20);
+            this.captionNew.Size = new System.Drawing.Size(545, 20);
             this.captionNew.TabIndex = 12;
             // 
             // authorNew
             // 
-            this.authorNew.Location = new System.Drawing.Point(637, 321);
+            this.authorNew.Location = new System.Drawing.Point(506, 321);
             this.authorNew.Name = "authorNew";
-            this.authorNew.Size = new System.Drawing.Size(308, 20);
+            this.authorNew.Size = new System.Drawing.Size(545, 20);
             this.authorNew.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 450);
+            this.ClientSize = new System.Drawing.Size(1093, 537);
             this.Controls.Add(this.authorNew);
             this.Controls.Add(this.captionNew);
             this.Controls.Add(this.button7);
